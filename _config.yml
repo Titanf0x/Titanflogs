@@ -21,7 +21,7 @@
 title: Titanflogs
 description: The personal creative vault of Titanfox.
 url: "https://titanf0x.github.io"
-baseurl: "/titanflogs" # Remove or leave empty if using a custom domain or user page
+baseurl: "/Titanflogs" # Remove or leave empty if using a custom domain or user page
 author: Titanfox
 
 # Build settings
