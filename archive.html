@@ -1,0 +1,18 @@
+---
+layout: default
+title: The Vault (Archive)
+---
+
+## Complete Archive
+
+<ul style="list-style: none;">
+{% for post in site.posts %}
+  <li style="margin-bottom: 1rem;">
+    <span style="font-family: var(--font-headings); color: var(--metal-light); display: inline-block; width: 120px;">
+        {{ post.date | date: "%Y-%m-%d" }}
+    </span>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <small style="color: var(--accent-neon);">[{{ post.categories | join: ", " }}]</small>
+  </li>
+{% endfor %}
+</ul>

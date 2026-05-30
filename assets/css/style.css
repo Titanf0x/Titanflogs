@@ -1,0 +1,113 @@
+---
+---
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Rajdhani:wght@400;500;700&display=swap');
+
+:root {
+  --bg-dark: #000000;
+  --text-main: #d3d7cf;
+  --accent-neon: #FF5E00;
+  --metal-light: #8a8d91;
+  --metal-dark: #1a1a1a;
+  --font-headings: 'Rajdhani', sans-serif;
+  --font-body: 'Lora', serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headings);
+  color: var(--metal-light);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+a {
+  color: var(--accent-neon);
+  text-decoration: none;
+  transition: text-shadow 0.3s ease;
+  &:hover { text-shadow: 0 0 8px var(--accent-neon); }
+}
+
+/* Layout */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  border-bottom: 1px solid var(--metal-dark);
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: var(--font-headings);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-neon);
+
+    img { width: 50px; height: 50px; }
+  }
+
+  nav a {
+    margin-left: 20px;
+    font-family: var(--font-headings);
+    color: var(--metal-light);
+    font-size: 1.1rem;
+    &:hover { color: var(--accent-neon); }
+  }
+}
+
+/* Dark Academia Elements */
+.academia-block {
+  background: linear-gradient(135deg, rgba(20,20,20,0.9), rgba(10,10,10,0.9)), url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.5"/></filter><rect width="100" height="100" filter="url(%23n)" opacity="0.05"/></svg>');
+  border: 1px solid var(--metal-dark);
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+}
+
+hr.ornate {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, var(--accent-neon), transparent);
+  margin: 3rem 0;
+}
+
+footer {
+  text-align: center;
+  padding: 3rem 0;
+  margin-top: 4rem;
+  border-top: 1px solid var(--metal-dark);
+  font-family: var(--font-headings);
+  font-size: 0.9rem;
+}
+
+/* Grid for Archives/Projects */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid var(--metal-dark);
+  padding: 1.5rem;
+  transition: border-color 0.3s ease;
+  &:hover { border-color: var(--accent-neon); }
+}
